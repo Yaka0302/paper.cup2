@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>おんがくこうさくらんど</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1><span class="pink">おんがく</span><span class="orange">こうさく</span><span class="blue">らんど</span></h1>
+  <p>つくって うごかして おんがくあそび♪</p>
+</header>
+
+<main>
+<section class="panel">
+  <h2>6しゅるいから えらぼう</h2>
+  <div id="craftGrid" class="grid"></div>
+</section>
+
+<section class="panel">
+  <h2 id="craftTitle"></h2>
+  <img id="finishedPhoto" class="photo" src="rabbit.jpg" alt="うさぎの できあがりしゃしん">
+  <ol id="steps" class="steps"></ol>
+
+  <a id="pdfLink" class="pdf-button" href="rabbit.pdf" download="rabbit.pdf">
+    📄 A4の かたがみPDFを ダウンロード
+  </a>
+
+  <p class="help">※ ZIPを先に「すべて展開」してから、このHTMLを開いてください。</p>
+  <button id="nextBtn" class="next">こうさくが おわったら つぎへ ▶</button>
+</section>
+
+<section id="cameraPanel" class="panel camera-panel">
+  <h2 id="cameraTitle"></h2>
+  <div class="camera-frame"><video id="video" autoplay playsinline muted></video></div>
+  <div id="guide" class="guide">おんがくあそびが はじまるよ！</div>
+  <div id="musicState" class="music-state">🎵 やさしい おんがく</div>
+  <div class="actions">
+    <button id="replayBtn" class="purple">🔁 もういちど</button>
+    <button id="closeBtn" class="gray">◀ もどる</button>
+  </div>
+</section>
+</main>
+
+<audio id="bgm" src="rabbit_soft.wav" loop preload="auto"></audio>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
